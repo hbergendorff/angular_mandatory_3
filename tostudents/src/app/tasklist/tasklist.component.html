@@ -1,0 +1,13 @@
+<div class="header">
+  <!-- Render status type for this task list here... -->
+  {{ statusType }}
+</div>
+
+<div *ngFor="let task of tasks">
+  <task
+  *ngIf="statusCheck(task)"
+  [task]="task">
+  </task>
+
+</div>
+<!-- Markup for displaying all tasks that have the status type of this list set... fixa loop till tasks -->
